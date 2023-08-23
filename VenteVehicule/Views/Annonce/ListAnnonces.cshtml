@@ -1,0 +1,30 @@
+﻿@model List<Annonce>
+
+<h2>Liste des Annonces</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>DescriptionAnnonce</th>
+            <th>Prix</th>
+            <th>Date de Mise en Ligne</th>
+            <th>Vendeur</th>
+            
+        <tr/>
+    </thead>
+    <tbody>
+        @foreach (var annonce in Model)
+        {
+            <img src="@annonce.ImageURL" alt="Image de l'annonce">
+            <tr>
+                <td>@annonce.DescriptionAnnonce</td>
+                <td>@annonce.Prix</td>
+                <td>@annonce.DateMiseEnLigne</td>
+                <td>@annonce.Vendeur</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
